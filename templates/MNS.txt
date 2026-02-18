@@ -1,0 +1,2 @@
+<property id="<ID>" key="PressureIn" tag="<TAG>.TI.Pin" />
+<property id="<ID>" key="StopStateOfPumpStation" tag="<TAG>.State.Status" />

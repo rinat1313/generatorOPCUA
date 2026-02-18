@@ -1,0 +1,2 @@
+<property id="6604" key="EnvironmentalTemperature" tag="<TAG>.TI.TGround" />
+<property id="6604" key="CanBeControlled" tag="<TAG>.Ctrl.TUPrep" />

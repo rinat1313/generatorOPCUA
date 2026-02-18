@@ -1,0 +1,15 @@
+<property id="<ID>" key="PressureOut" tag="<TAG>.TI.Pout" />                           
+<property id="<ID>" key="Vibration" tag="<TAG>.TI.VibrMax" />                          
+<property id="<ID>" key="Current" tag="<TAG>.TI.Current" />                            
+<property id="<ID>" key="Power" tag="<TAG>.TI.PowerA" />                               
+<property id="<ID>" key="PressureIn" tag="<TAG>.TI.Pin" />                             
+<property id="<ID>" key="WorkingTimeSwitchCalc" tag="<TAG>.TI.WorkTimeRez" />          
+<property id="<ID>" key="WorkingTimeRepairCalc" tag="<TAG>.WorkTimeRem" />             
+<property id="<ID>" key="IsReserve" tag="<TAG>.State.StartMode.Rez" />                 
+<property id="<ID>" key="IsBasic" tag="<TAG>.State.StartMode.Auto" />                  
+<property id="<ID>" key="IsMaintenance" tag="<TAG>.State.Rem" />                       
+<property id="<ID>" key="IsReadyToStart" tag="<TAG>.State.Ready" />                    
+<property id="<ID>" key="IsStartingProgramm" tag="<TAG>.State.Start" />                
+<property id="<ID>" key="IsStoppingProgramm" tag="<TAG>.State.Stop" />                 
+<property id="<ID>" key="RpmCalc" tag="<TAG>.TI.Rpm" />
+<property id="<ID>" key="Status" tag="<TAG>.State.Status" />

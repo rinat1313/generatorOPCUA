@@ -1,0 +1,4 @@
+<property id="<ID>" key="LeakTime" tag="<TAG>.TI.TimeLeakInt" />                      
+<property id="<ID>" key="LeakConsumption" tag="<TAG>.TI.Qleak" />   
+<property id="<ID>" key="LeakPoint" tag="<TAG>.TI.PointLeak" />  
+<property id="<ID>" key="LeakPressureDiff" tag="<TAG>.TI.DeltaP" />    

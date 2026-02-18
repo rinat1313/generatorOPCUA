@@ -1,0 +1,3 @@
+<property id="<ID>" key="Concentration" tag="<TAG>.TI.QmomUst" />
+<property id="<ID>" key="FlowImproverConsumptionCalc" tag="<TAG>.TI.Qmom" />
+<property id="<ID>" key="ConcentrationCalc" tag="<TAG>.TI.QVint" />

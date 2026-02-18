@@ -1,0 +1,11 @@
+    <property id="<ID>" key="PressureIn" tag="<TAG>.TI.Pin" />
+    <property id="<ID>" key="ValveOpeningCalc" tag="<TAG>.TI.OpenPrc" />
+    <property id="<ID>" key="PressureOut" tag="<TAG>.TI.Pout" />
+    <property id="<ID>" key="Status" tag="<TAG>.State.Status" />
+    <property id="<ID>" key="HasVoltage" tag="<TAG>.Alm.AlmU" />
+    <property id="<ID>" key="CanBeControlled" tag="<TAG>.Ctrl.TUPrep" />
+    <property id="<ID>" key="IsAlarmClose" tag="<TAG>.Alm.AlmStatusSW.AlarmUnauthOpen" />
+    <property id="<ID>" key="IsAlarmOpen" tag="<TAG>.Alm.AlmStatusSW.AlarmUnauthClose" />
+    <property id="<ID>" key="RemoteControl" tag="<TAG>.Ctrl.DistContrl" />
+    <property id="<ID>" key="LocalControl" tag="<TAG>.Ctrl.LoclContrl" />
+    <property id="<ID>" key="IsAlarmChangingState" tag="<TAG>.Alm.AlmHeap.AlarmFailDirect" />

@@ -1,0 +1,2 @@
+<property id="<ID>" key="" tag="<TAG>.TI.Pin" />                      
+<property id="<ID>" key="" tag="<TAG>.TI.Pout" />                            

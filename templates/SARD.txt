@@ -1,0 +1,5 @@
+<property id="<ID>" key="PressureLoss" tag="<TAG>.TI.Pdelta" />
+<property id="<ID>" key="PIDOutSet" tag="<TAG>.TI.UstOut" />
+<property id="<ID>" key="PIDInSet" tag="<TAG>.TI.UstIn" />
+<property id="<ID>" key="PressureIn" tag="<TAG>.TI.Pin" />
+<property id="<ID>" key="PressureOut" tag="<TAG>.TI.Pout" />

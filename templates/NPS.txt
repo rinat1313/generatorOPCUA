@@ -1,0 +1,9 @@
+<property id="<ID>" key="GroundTemperature" tag="<TAG>.TGround" />
+<property id="<ID>" key="AirTemperature" tag="<TAG>.TI.TairOut" />
+<property id="<ID>" key="Status" tag="<TAG>.State.Status" />
+<property id="<ID>" key="ControlMode" tag="<TAG>.Ctrl.DistContrl" />
+<property id="<ID>" key="PressureIn" tag="<TAG>.TI.Pin" />
+<property id="<ID>" key="PressureOut" tag="<TAG>.TI.Pout" />
+<property id="<ID>" key="TemperatureIn" tag="<TAG>.TI.Tin" />
+<property id="<ID>" key="TemperatureOut" tag="<TAG>.TI.Tout" />
+<property id="<ID>" key="WorkingPumpsCount" tag="<TAG>.State.MNAinRIP" />

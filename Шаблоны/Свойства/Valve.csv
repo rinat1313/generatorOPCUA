@@ -1,0 +1,11 @@
+PressureIn	TI.Pin
+ValveOpeningCalc	TI.OpenPrc
+PressureOut	TI.Pout
+Status	State.Status
+HasVoltage	Alm.AlmU
+CanBeControlled	Ctrl.TUPrep
+IsAlarmClose	Alm.AlmStatusSW.AlarmUnauthOpen
+IsAlarmOpen	Alm.AlmStatusSW.AlarmUnauthClose
+RemoteControl	Ctrl.DistContrl
+LocalControl	Ctrl.LoclContrl
+IsAlarmChangingState	Alm.AlmHeap.AlarmFailDirect
