@@ -1,0 +1,5 @@
+IsManual	Ctrl.Manual
+IsAutomatic	Ctrl.Auto
+IsRemote	Ctrl.DistContrl
+OpeningPercent	TI.OpenPrc
+Status	State.Status

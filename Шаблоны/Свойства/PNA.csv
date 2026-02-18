@@ -1,0 +1,15 @@
+PressureOut	TI.Pout
+Vibration	TI.VibrMax
+Current	TI.Current
+Power	TI.PowerA
+PressureIn	TI.Pin
+WorkingTimeSwitchCalc	TI.WorkTimeRez
+WorkingTimeRepairCalc	WorkTimeRem
+IsReserve	State.StartMode.Rez
+IsBasic	State.StartMode.Auto
+IsMaintenance	State.Rem
+IsReadyToStart	State.Ready
+IsStartingProgramm	State.Start
+IsStoppingProgramm	State.Stop
+RpmCalc	TI.Rpm
+Status	State.Status

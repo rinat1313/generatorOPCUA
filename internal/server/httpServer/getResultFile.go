@@ -90,8 +90,6 @@ func GetResultFile(w http.ResponseWriter, r *http.Request) {
 	}
 	defer r.Body.Close()
 
-	//fmt.Printf("Тело запроса: %s\n", string(body))
-
 	// Декодируем JSON запрос
 	var req GenerateRequest
 	err = json.Unmarshal(body, &req)
@@ -136,13 +134,16 @@ func GetResultFile(w http.ResponseWriter, r *http.Request) {
 		commands = service.ParseCommandToNameObj(req.ObjectType, req.Filename, bodyResult, comma)
 	}
 
-	if req.Options.Properties {
+	if req.Options.Protections {
 		bodyResult := ""
 		comma := '\t'
-		for _, command := range req.Mappings["properties"] {
+		for _, command := range req.Mappings["protections"] {
 			bodyResult += command.Description + string(comma) + command.Tag + "\n"
 		}
 		automations = service.ParseAutomationToBody(req.ObjectType, req.Filename, bodyResult, comma)
+
+		fmt.Printf("Итоговое количество защит: %d\n", len(automations))
+
 	}
 
 	headerResult := ""
@@ -157,7 +158,7 @@ func GetResultFile(w http.ResponseWriter, r *http.Request) {
 		for _, object := range req.Objects {
 			if command, ok := commands[object.ID]; ok {
 				for _, value := range command {
-					commandsResult += "\t<object id=\"" + value.Id + "\" tag=\"" + object.Tag + value.AfterHeaderTag + "\" />\n"
+					commandsResult += "\t<object id=\"" + value.Id + "\" tag=\"" + object.Tag + "." + value.AfterHeaderTag + "\" />\n"
 				}
 			}
 		}
@@ -166,10 +167,11 @@ func GetResultFile(w http.ResponseWriter, r *http.Request) {
 	automatoResult := ""
 
 	if req.Options.Protections {
+		fmt.Printf("Начинаем добавлять защиты\n")
 		for _, object := range req.Objects {
 			if automation, ok := automations[object.ID]; ok {
 				for _, value := range automation {
-					automatoResult += "\t<object id=\"" + value.Id + "\" tag=\"" + object.Tag + value.AfterHeaderTag + "\" />\n"
+					automatoResult += "\t<object id=\"" + value.Id + "\" tag=\"" + object.Tag + "." + value.AfterHeaderTag + "\" />\n"
 				}
 			}
 		}
@@ -183,23 +185,6 @@ func GetResultFile(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 	}
-
-	// =====================================================
-	// ЗДЕСЬ ВЫЗОВ ВАШЕЙ ФУНКЦИИ ДЛЯ ГЕНЕРАЦИИ XML ФАЙЛА
-	// =====================================================
-	// Предположим, у вас есть функция GenerateXML, которая принимает данные
-	// и возвращает сгенерированный XML в виде []byte
-	//
-	// Пример:
-	// xmlData, err := service.GenerateResultXML(req)
-	// if err != nil {
-	//     fmt.Printf("Ошибка генерации XML: %v\n", err)
-	//     http.Error(w, "Error generating XML", http.StatusInternalServerError)
-	//     return
-	// }
-	// =====================================================
-
-	// Для примера создадим XML из структур
 
 	resultXml := "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<root>\n  <objects>\n"
 	resultXml += headerResult

@@ -1,0 +1,5 @@
+PressureIn	TI.P
+MassFlow_Calc	TI.Qmom
+TemperatureIn	TI.Toil
+ConsumptionOut	TI.QVmom
+Status	State.Status

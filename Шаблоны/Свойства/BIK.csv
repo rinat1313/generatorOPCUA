@@ -1,0 +1,7 @@
+Density20Calc	TI.RoNorm
+TemperatureCalc	TI.T
+DensityTCalc	TI.Ro
+ViscosityTCalc	TI.Visc
+Status	State.Status
+PressureIn	TI.P
+MassFlow_Calc	TI.Qmom

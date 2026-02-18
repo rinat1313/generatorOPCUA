@@ -1,4 +1,4 @@
-ValveOpen	.TU.Open
-ValveClose	.TU.Close
-ValveStop	.TU.Stop
-UnBlockValveDefence	.TU.DeblockAlarm
+ValveOpen	TU.Open
+ValveClose	TU.Close
+ValveStop	TU.Stop
+UnBlockValveDefence	TU.DeblockAlarm

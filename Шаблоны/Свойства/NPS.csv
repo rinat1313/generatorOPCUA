@@ -1,0 +1,9 @@
+GroundTemperature	TGround
+AirTemperature	TI.TairOut
+Status	State.Status
+ControlMode	Ctrl.DistContrl
+PressureIn	TI.Pin
+PressureOut	TI.Pout
+TemperatureIn	TI.Tin
+TemperatureOut	TI.Tout
+WorkingPumpsCount	State.MNAinRIP

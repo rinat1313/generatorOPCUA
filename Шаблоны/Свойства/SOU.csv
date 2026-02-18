@@ -1,0 +1,4 @@
+LeakTime	TI.TimeLeakInt
+LeakConsumption	TI.Qleak
+LeakPoint	TI.PointLeak
+LeakPressureDiff	TI.DeltaP

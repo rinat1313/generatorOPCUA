@@ -1,0 +1,16 @@
+Current	TI.Current
+Power	TI.PowerA
+PressureIn	TI.Pin
+PressureOut	TI.Pout
+WorkingTimeSwitchCalc	TI.WorkTimeRez
+WorkingTimeRepairCalc	TI.WorkTimeRem
+Vibration	TI.VibrMax
+IsAutomaticControl	Ctrl.DistContrl
+IsReserve	State.StartMode.Rez
+IsStoppingProgramm	State.ProgStop
+IsStartingProgramm	State.Prog
+IsReadyToStart	State.Ready
+IsMaintenance	State.Rem
+IsBasic	State.StartMode.Auto
+Status	State.Status
+LaunchProgramNumber	State.StartMode.Mode1

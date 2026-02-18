@@ -84,12 +84,6 @@ func ParseCommandXMLToNameObj(name string) map[string]map[string]domen.CommandSt
 		result = append(result, tmp)
 	}
 
-	//for _, command := range result {
-	//	if command.Template == "ShopMainstreamStopOnPumpStation" || command.Template == "ShopBoosterStopOnPumpStation" {
-	//		fmt.Printf("Комманда: %s, имя: %s, template: %s\n", command.Target, command.Name, command.Template)
-	//	}
-	//}
-
 	mapComm, err := MakeObjectsCommand("ШаблоныКомманд/"+name+".csv", '\t')
 
 	if err != nil {
@@ -97,9 +91,7 @@ func ParseCommandXMLToNameObj(name string) map[string]map[string]domen.CommandSt
 	}
 
 	var commands = make(map[string]map[string]domen.CommandStruct, len(result))
-	//for key, val := range mapComm {
-	//	fmt.Printf("Template: %s; afterOpcUA: %s\n", key, val.AfterHeaderTag)
-	//}
+
 	fmt.Printf("Всего распарсеных комманд: %d\n", len(mapComm))
 	fmt.Printf("Найдено объектов: %d\n", len(result))
 
@@ -158,28 +150,17 @@ func ParseAutomationXMLToNameObj(name string) map[string]map[string]domen.Automa
 		}
 	}
 
-	//fmt.Println("-----------")
-	//
-	//for k, v := range unicMap {
-	//	fmt.Printf("%s\t%s\t%s\t%s\n", k, v.Name, v.Description, v.Tag)
-	//}
-	//
-	//fmt.Println("-----------")
-
 	// end
 
 	mapAutomation, err := MakeObjectsAutomation("ШаблоныЗащит/"+name+".csv", '\t')
 	if err != nil {
 		fmt.Println(err)
 	}
-	//fmt.Printf("Size: %d\n", len(result))
 	var automations = make(map[string]map[string]domen.AutomationStruct)
 	for _, automation := range result {
-		//fmt.Printf("Template name: %s\n", automation.Description)
 		if _, ok := mapAutomation[automation.Template]; !ok {
 			continue
 		}
-		//fmt.Printf("Найденная защита: %s\n", automation.Name)
 		tmp, _ := mapAutomation[automation.Template]
 		tmp.Id = automation.Id
 		m, ok := automations[automation.Target]
@@ -200,13 +181,11 @@ func ParseCommandToNameObj(nameTemplate, nameSolution, body string, comma rune) 
 		fmt.Println(err)
 	}
 	templateCommand := "<ControlCommand\\s+[^>]*?/>"
-	//templateCommand := "<ControlCommand\\b[^>]*(?:>(?:.*?</ControlCommand>)|/>)"
 	fmt.Printf("Проверка комманд\n")
 	fmt.Println("Тип команды: " + nameTemplate)
 	if nameTemplate == "PumpStation" || nameTemplate == "ShopBooster" {
 		fmt.Printf("Добавляем новый regex для парсинга\n")
-		//templateCommand = "<ControlCommand\\b[^>]*>(?:.*?</ControlCommand>|/>)"
-		templateCommand = "<ControlCommand\\\\b[^>]*>(?:.*?</ControlCommand>)|<ControlCommand\\\\b[^>]*?/>"
+		templateCommand = "<ControlCommand\\b[^>]*>(?:.*?</ControlCommand>|/>)"
 	}
 
 	re := regexp.MustCompile(templateCommand)
@@ -258,7 +237,6 @@ func GetBodySolution(path, regex string) ([]string, error) {
 func ParseAutomationToBody(nameTemplate, nameSolution, body string, comma rune) map[string]map[string]domen.AutomationStruct {
 	fmt.Printf("Старт генерации защит для типа объектов: %s\n", nameTemplate)
 	var result []domen.Automation
-	// <Automation\s+([^>]+)>(.*?)/>
 
 	templateAutomation := "<Automation\\b[^>]*>.*?</Automation>"
 	matches, err := GetBodySolution(nameSolution, templateAutomation)
@@ -269,6 +247,7 @@ func ParseAutomationToBody(nameTemplate, nameSolution, body string, comma rune) 
 	for _, automation := range matches {
 		var tmp domen.Automation
 		err := xml.Unmarshal([]byte(automation), &tmp)
+
 		if err != nil {
 			fmt.Printf("Ошибка с текстом: %s\n", automation)
 		}
@@ -278,6 +257,8 @@ func ParseAutomationToBody(nameTemplate, nameSolution, body string, comma rune) 
 	// start
 
 	inf, err := MakeObjectsToString(body, comma)
+
+	fmt.Printf("Количество объектов объектов: %d\n", len(inf))
 
 	unicMap := make(map[string]domen.Automation)
 
@@ -292,17 +273,17 @@ func ParseAutomationToBody(nameTemplate, nameSolution, body string, comma rune) 
 	}
 
 	mapAutomation, err := MakeObjectsAutomationToString(body, comma)
+
 	if err != nil {
 		fmt.Println(err)
 	}
-	//fmt.Printf("Size: %d\n", len(result))
+
+	fmt.Printf("Размер мапы: %d\n", len(mapAutomation))
 	var automations = make(map[string]map[string]domen.AutomationStruct)
 	for _, automation := range result {
-		//fmt.Printf("Template name: %s\n", automation.Description)
 		if _, ok := mapAutomation[automation.Template]; !ok {
 			continue
 		}
-		//fmt.Printf("Найденная защита: %s\n", automation.Name)
 		tmp, _ := mapAutomation[automation.Template]
 		tmp.Id = automation.Id
 		m, ok := automations[automation.Target]

@@ -1,0 +1,5 @@
+PressureLoss	TI.Pdelta
+PIDOutSet	TI.UstOut
+PIDInSet	TI.UstIn
+PressureIn	TI.Pin
+PressureOut	TI.Pout
