@@ -1,5 +1,0 @@
-<property id="<ID>" key="PressureIn" tag="<TAG>.TI.P" />                                        
-<property id="<ID>" key="MassFlow_Calc" tag="<TAG>.TI.Qmom" />                                 
-<property id="<ID>" key="TemperatureIn" tag="<TAG>.TI.Toil" />                                 
-<property id="<ID>" key="ConsumptionOut" tag="<TAG>.TI.QVmom" />                               
-<property id="<ID>" key="Status" tag="<TAG>.State.Status" />

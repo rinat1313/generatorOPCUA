@@ -1,3 +1,0 @@
-<property id="<ID>" key="PressureOut" tag="<TAG>.TI.Pout" />
-<property id="<ID>" key="Status" tag="<TAG>.State.Status" />
-<property id="<ID>" key="PressureIn" tag="<TAG>.TI.Pin" />

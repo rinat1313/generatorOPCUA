@@ -1,5 +1,0 @@
-<property id="<ID>" key="IsManual" tag="<TAG>.Ctrl.Manual" />                
-<property id="<ID>" key="IsAutomatic" tag="<TAG>.Ctrl.Auto" />               
-<property id="<ID>" key="IsRemote" tag="<TAG>.Ctrl.DistContrl" />            
-<property id="<ID>" key="OpeningPercent" tag="<TAG>.TI.OpenPrc" />           
-<property id="<ID>" key="Status" tag="<TAG>.State.Status" />  

@@ -1,2 +1,0 @@
-    <property id="<ID>" key="PressureIn" tag="<TAG>.TI.P" />
-    <property id="<ID>" key="PressureOut" tag="<TAG>.TI.P" />

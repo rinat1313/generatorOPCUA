@@ -1,2 +1,0 @@
-<property id="ID" key="TemperatureOut" tag="<TAG>.TI.Value" />
-<property id="ID" key="PressureIn" tag="<TAG>.TI.P" />

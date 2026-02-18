@@ -1,7 +1,0 @@
-<property id="<ID>" key="Density20Calc" tag="<TAG>.TI.RoNorm" />
-<property id="<ID>" key="TemperatureCalc" tag="<TAG>.TI.T" />
-<property id="<ID>" key="DensityTCalc" tag="<TAG>.TI.Ro" />
-<property id="<ID>" key="ViscosityTCalc" tag="<TAG>.TI.Visc" />
-<property id="<ID>" key="Status" tag="<TAG>.State.Status" />
-<property id="<ID>" key="PressureIn" tag="<TAG>.TI.P" />
-<property id="<ID>" key="MassFlow_Calc" tag="<TAG>.TI.Qmom" />
